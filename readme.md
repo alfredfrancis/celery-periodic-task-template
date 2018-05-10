@@ -14,6 +14,7 @@ celery worker -l info -A app --beat
 ## or Docker (Recommended for production) 
 ```sh
 docker build -t celery-periodic-task .
+docker run --name redis1 -it -p 6379:6379 redis 
 docker run -d --name celery-periodic-task-1 celery-periodic-task:latest
 ```
 
